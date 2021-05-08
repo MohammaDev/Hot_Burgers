@@ -36,11 +36,11 @@ function showReviews(id) {
         var response = JSON.parse(requestToGet.responseText);
         if (requestToGet.readyState == 4 && requestToGet.status == "200") {
 
-          document.getElementById("indicators-area").innerHTML = ""
-          document.getElementById("inner-area").innerHTML = ""
-
             console.table(response);
             if (response.length > 0) {
+
+              document.getElementById("indicators-area").innerHTML = ""
+              document.getElementById("inner-area").innerHTML = ""
 
               document.getElementById("indicators-area").innerHTML = '<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-warning" aria-current="true" aria-label="Slide 1"></button>'
 
@@ -99,7 +99,7 @@ function showReviews(id) {
 
             }
             else {
-              document.getElementById("reviews-area").innerHTML = "<h3>No Reviews</h3>";
+              document.getElementById("reviews-area").innerHTML = "<div class='special-case'><h3>No Reviews</h3></div>";
             }
         }
         else {
@@ -320,7 +320,16 @@ function SubmitButtonClicked() {
   }
 }
 
- function appear(){
-    document.getElementById('Reviewlist').style.height = "100%";
-    document.getElementById('Reviewlist').style.paddingLeft = "0px";
+function disappearReviewList() {
+  document.getElementById('Reviewlist').style.display = "none";
+  console.log("dis")
+}
+
+function appear(){
+  document.getElementById('Reviewlist').style.display = "block";
+  for (var i = 0; i < 10000000; i++) {
+    //
+  }
+  document.getElementById('Reviewlist').style.height = "100%";
+  document.getElementById('Reviewlist').style.paddingLeft = "0px";
 }

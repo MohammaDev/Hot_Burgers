@@ -1,14 +1,14 @@
-<nav class="nav-container navbar fixed-top navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#">
+<nav class="nav-container navbar fixed-top navbar-expand-xl  navbar-dark">
+  <a class="navbar-brand" href="../Hot_Burgers">
     <img src="Images/logo-White.svg" alt="logo-image">
   </a>
 
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon "></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ms-uto">
       <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="index.php#menu">Menu</a></li>
       <li class="nav-item"><a class="nav-link" href="index.php#gallery">Gallery</a></li>

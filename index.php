@@ -33,13 +33,12 @@
 
     <!-- HOME HEADER -->
     <header class="home-header">
-      <div class="header-content">
         <h1 class="party-time">Party Time</h1>
-        <img src="Images/badge.png" class="badge-image" alt="">
-        <h3 class="by-2-burger">Buy any 2 burgers and get 1.5L Pepsi Free</h3><br>
+        <div class="box"><h3 class="by-2-burger">Buy any 2 burgers and get 1.5L Pepsi Free</h3></div>
         <a class="btn btn-sm rounded-pill btn-warning order-btn">Order Now</a>
-      </div>
     </header>
+
+
 
     <!-- MENU SECTION -->
     <section id=menu>
@@ -76,50 +75,45 @@
             <?php endforeach; ?>
           </div>
         <?php endif; ?>
-
-        <section class="menu-subsection-1">
+      </section>
+        <section class="menu-subsection-1 my-container">
 
           <h2 class="want-to-eat">Want To Eat</h2>
           <p class="try-our-delicious">Try our most delicious food and usually take minutes to deliver</p>
 
           <div class="row g-0">
-            <div class="col-2">
+            <div class="col-md-2 col-4">
               <a href="" class="menu-links">pizza</a>
             </div>
-            <div class="col-2">
+            <div class="col-md-2 col-4">
               <a href="" class="menu-links">fast food</a>
             </div>
-            <div class="col-2">
+            <div class="col-md-2 col-4">
               <a href="" class="menu-links">cub cake</a>
             </div>
-            <div class="col-2">
+            <div class="col-md-2 col-4">
               <a href="" class="menu-links">sandwich</a>
             </div>
-            <div class="col-2">
+            <div class="col-md-2 col-4">
               <a href="" class="menu-links">spaghetti</a>
             </div>
-            <div class="col-2">
+            <div class="col-md-2 col-4">
               <a href="" class="menu-links">burger</a>
             </div>
           </div>
         </section>
-      </section>
+
 
       <!-- MENU SUBSECTION 2-->
       <section class="menu-subsection-2">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-6 d-flex justify-content-center">
-              <img src="Images/delivery.png" alt="delivery_guy_picture">
+            <div class="col-xl-6 d-flex justify-content-center">
+              <img src="Images/delivery.png" class="delivery-guy-img" alt="delivery_guy_picture">
             </div>
-            <div class="col-lg-6 div-middle d-flex justify-content-center">
+            <div class="col-xl-6 div-middle d-flex justify-content-center">
               <div class="right-guy-div">
-                <div class="triangle-container">
-                  <img src="Images/triangle.png" class="triangle-image" alt="triangle-image.png">
-                  <div class="centered">
-                    <h2 class="we-guarantee">We guarantee 30 minutes delivery</h2>
-                  </div>
-                </div>
+                <div class="triangle"><h2 class="we-guarantee">We guarantee 30 minutes delivery</h2></div>
                 <p class="if-you-are-having">If you are having a meeting, working late at night and need extra push</p>
               </div>
             </div>
@@ -159,7 +153,7 @@
     <section id=testimonials>
         <h2 class="clients">Clients Testimonials</h2>
 
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
 
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-warning" aria-current="true" aria-label="Slide 1"></button>
@@ -173,7 +167,7 @@
                 <div class="col-lg-6">
                   <img src="Images/man-eating-burger.png" class="meal-img" alt="man-eating-burger">
                 </div>
-                <div class="col-lg-6 div-middle">
+                <div class="col-lg-6 div-middle testimonial-desciption">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam?
@@ -187,7 +181,7 @@
                 <div class="col-lg-6">
                   <img src="Images/man-eating-burger.png" class="meal-img" alt="man-eating-burger">
                 </div>
-                <div class="col-lg-6 div-middle">
+                <div class="col-lg-6 div-middle testimonial-desciption">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam?
@@ -201,7 +195,7 @@
                 <div class="col-lg-6">
                   <img src="Images/man-eating-burger.png" class="meal-img" alt="man-eating-burger">
                 </div>
-                <div class="col-lg-6 div-middle">
+                <div class="col-lg-6 div-middle testimonial-desciption">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam?

@@ -5,7 +5,7 @@
     <div class="col-lg-6">
       <div class="red-div">
         <ul class="ul-contact">
-          <li>phone: <b>+966-13-860-0000</b></li>
+          <li class="phone" >Phone: <br><b>+966-13-860-0000</b></li>
           <p></p>
 
           <li>
@@ -30,7 +30,7 @@
           </li>
           <br>
           <br>
-          <li style="padding-left: 1.875rem;">
+          <li class = "social-links">
             <a href="" class="HB-social-links">Facebook</a>
             <a href="" class="HB-social-links">Twitter</a>
             <a href="" class="HB-social-links">Instagram</a>
@@ -46,7 +46,7 @@
   <footer>
     <div class="row">
 
-      <div class="col-lg-4">
+      <div class="col-lg-4 leftdiv">
         <div class="left-div">
           <img src="Images/logo-red.svg" alt="map-image">
           <p>

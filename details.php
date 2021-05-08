@@ -19,7 +19,7 @@
   <title>Burger Details</title>
 </head>
 
-<body>
+<body onload="disappearReviewList()">
 
   <!-- NAV & Madal -->
   <?php
@@ -57,7 +57,7 @@
 
       <div class="my-container">
         <div id="taps-area">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <ul class="nav nav-pills nav-fill mt-5 mb-4" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
                   <button class="nav-link desciption-title active" id="pills-discription-tab" data-bs-toggle="pill" data-bs-target="#pills-discription" type="button" role="tab" aria-controls="pills-discription" aria-selected="true">Discription</button>
               </li>
@@ -76,7 +76,7 @@
             <?php echo $meal_db["description"]; ?>
           </p>
 
-          <h4 class="table-title">nurtion facts</h4>
+          <h4 class="table-title">Nurtion Facts</h4>
 
           <table class="table-style">
             <tr>
@@ -111,7 +111,7 @@
         <!-- REVIEW_SECTION -->
         <div class="tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
           <div id="reviews-area">
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
 
             <div class="carousel-indicators">
               <div id="indicators-area">
@@ -142,7 +142,7 @@
           <div class="my-container">
             <section id="Reviewlist">
 
-              <form enctype="multipart/form-data" method="post" onsubmit="return sendForm(this)">
+              <form enctype="multipart/form-data" onsubmit="return sendForm(this)">
 
                   <input type="hidden" name="meal_id" value=<?php echo $_GET["id"]; ?>>
 
