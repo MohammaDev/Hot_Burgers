@@ -40,12 +40,12 @@ body {
 }
 
 .nav-container ul {
-  list-style-type: none;
-  overflow: hidden;
+  /* list-style-type: none;
+  overflow: hidden; */
 }
 
 .nav-container li {
-  float: left;
+  /* float: left; */
   background-color: #281923;
 }
 
@@ -363,7 +363,7 @@ body {
 }
 
 .row .div-middle p {
-  /* margin-left: 40px; */
+  margin-left: 40px;
   font-weight: 300;
   font-family: 'Montserrat', sans-serif;
 }
@@ -372,6 +372,9 @@ body {
     text-align: center;
     width: 70%;
     margin: 20px auto auto;
+  }
+  .row .div-middle p {
+    margin-left: 0;
   }
 }
 

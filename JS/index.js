@@ -1,3 +1,15 @@
+function nav_to(area) {
+  document.getElementById(area+'-anchor').click();
+}
+
+function hide_nav_onscroll() {
+  let nav = document.getElementById('navbarTogglerDemo02');
+
+  if(nav.offsetParent != null) {
+    nav.classList.toggle('show');
+  }
+}
+
 var counter = 0;
 
 var counter1 = 0;

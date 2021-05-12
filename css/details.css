@@ -10,7 +10,6 @@ body {
 
 .nav-container {
   background-color: #281923;
-  /* opacity: 61%; */
   padding: 40px 0px 10px 0px;
   margin: 0;
 }
@@ -42,14 +41,13 @@ body {
 }
 
 .nav-container ul {
-  list-style-type: none;
-  overflow: hidden;
+  /* list-style-type: none;
+  overflow: hidden; */
 }
 
 .nav-container li {
-  float: left;
+  /* float: left; */
   background-color: #281923;
-  /* opacity: 61%; */
 }
 
 .nav-container .nav-item .nav-link {
@@ -63,7 +61,6 @@ body {
 
 .nav-container .li-red {
   background-color: #A80E0E;
-  /* opacity: 100%; */
 }
 
 .nav-container li a {
@@ -90,10 +87,6 @@ body {
   }
 }
 @media (min-width: 850px) and (max-width: 991px) {
-  /* .navbar-collapse {
-    margin: auto 3rem;
-  } */
-
   .nav-container .nav-item .nav-link {
     font-size: 3rem;
     padding: 55px 52px 30px;
@@ -106,6 +99,15 @@ body {
   background-color: #FFDD00;
   color: #A80E0E;
   font-weight: 700;
+}
+
+@media (min-width: 850px) and (max-width: 991px) {
+  .modal-dialog {
+    max-width: 95%;
+  }
+  .modal-body {
+    font-size: 1.85rem;
+  }
 }
 
 .main-container {
@@ -225,6 +227,12 @@ font-weight: 300;
   margin-bottom: 20px;
 }
 
+@media (min-width: 850px) and (max-width: 991px) {
+  .mt-5 {
+    margin-top: 9rem !important;
+  }
+}
+
 .nav-pills .nav-item .nav-link.active {
     background-color: #FFAA00 !important;
     color: #A80E0E;
@@ -255,6 +263,11 @@ font-weight: 300;
 .carousel-item {
   padding: 3rem 10rem;
 }
+@media (max-width: 849px) {
+  .carousel-item {
+    padding: 3rem 5rem;
+  }
+}
 
 .desciption-body {
   font-family: 'Montserrat', sans-serif;
@@ -276,6 +289,7 @@ font-weight: 300;
 }
 @media (min-width: 850px) and (max-width: 991px) {
   .table-title {
+
     font-size: 4.5rem;
   }
 }
@@ -339,6 +353,12 @@ font-weight: 300;
     display: flex;
     align-items: center;
 }
+@media (max-width: 991px) {
+    .row .div-middle{
+        display: block;
+        align-items: center;
+    }
+}
 
 @media (max-width: 991px) {
   #review-text {
@@ -372,6 +392,14 @@ font-weight: 300;
   #review-text p {
     font-size: 2.5rem;
   }
+}
+
+#Reviewlist {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    height: 0px;
+    padding-left: 100%;
+    transition: padding-left 2s;
 }
 
 input[type=text], select {
@@ -432,51 +460,47 @@ input[type=button][name="submit-button"], select {
     margin: 0;
 }
 
-#Reviewlist {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    height: 0px;
-    padding-left: 100%;
-    transition: padding-left 2s;
+/* #Reviewlist ul {
+    padding: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+    text-align: left;
 }
 
-    #Reviewlist ul {
-        padding: 0;
-        margin-bottom: 0;
-        list-style-type: none;
-        text-align: left;
-    }
+#Reviewlist li {
+    padding-bottom: 5px;
+    vertical-align: middle;
+}
 
-    #Reviewlist li {
-        padding-bottom: 5px;
-        vertical-align: middle;
-    }
+#Reviewlist a {
+    text-decoration: none
+} */
 
-    #Reviewlist a {
-        text-decoration: none
-    }
+.add-review-btn {
+  color: #A80E0E;
+  background-color: #FFAA00;
+  padding: 1rem;
+  margin: 3rem 10rem;
+  font-size: 150%;
+  display: block;
+}
+@media (min-width: 850px) and (max-width: 991px) {
+  .add-review-btn {
+    font-size: 300%;
+  }
+}
+@media (max-width: 849px) {
+ .add-review-btn {
+    font-size: 100%;
+    padding: 0.5rem;
+    margin: 3rem 5rem;
+  }
+}
 
-    .add-review-btn {
-      color: #A80E0E;
-      margin-left: 10rem;
-      margin-bottom: 20px;
-      background-color: #FFAA00;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    @media (max-width: 1199px) {
-      .add-review-btn {
-        margin: auto 3rem;
-        padding: 1rem;
-        display: block;
-        font-size: 1.25rem;
-      }
-    }
-    @media (min-width: 850px) and (max-width: 991px) {
-      .add-review-btn {
-        font-size: 2.5rem;
-      }
-    }
+.add-review-btn:hover {
+  color: #A80E0E;
+  background-color: #FFDD00;
+}
 
 /************************ Contact Section Style ************************/
 .div-aligned-contact {

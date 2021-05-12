@@ -19,7 +19,7 @@
   <title>Burger Details</title>
 </head>
 
-<body onload="disappearReviewList()">
+<body onscroll="hide_nav_onscroll()" onload="disappearReviewList()">
 
   <!-- NAV & Madal -->
   <?php
@@ -62,7 +62,7 @@
                   <button class="nav-link desciption-title active" id="pills-discription-tab" data-bs-toggle="pill" data-bs-target="#pills-discription" type="button" role="tab" aria-controls="pills-discription" aria-selected="true">Discription</button>
               </li>
               <li class="nav-item" role="presentation">
-                  <button class="nav-link desciption-title" id="pills-reviews-tab" onclick="showReviews(<?= $_GET["id"] ?>)" data-bs-toggle="pill" data-bs-target="#pills-reviews" type="button" role="tab" aria-controls="pills-reviews" aria-selected="false">Reviews</button>
+                  <button class="nav-link desciption-title" id="pills-reviews-tab" onclick="showReviews(<?= $_GET['id'] ?>)" data-bs-toggle="pill" data-bs-target="#pills-reviews" type="button" role="tab" aria-controls="pills-reviews" aria-selected="false">Reviews</button>
               </li>
             </ul>
         </div>
@@ -142,7 +142,7 @@
           <div class="my-container">
             <section id="Reviewlist">
 
-              <form enctype="multipart/form-data" onsubmit="return sendForm(this)">
+              <form enctype="multipart/form-data" method="post" onsubmit="return sendForm(this)">
 
                   <input type="hidden" name="meal_id" value=<?php echo $_GET["id"]; ?>>
 

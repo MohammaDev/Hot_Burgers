@@ -19,7 +19,7 @@
   <script src="JS/index.js"></script>
 </head>
 
-<body>
+<body onscroll="hide_nav_onscroll()">
 
   <!-- NAV & Madal -->
   <?php
@@ -32,7 +32,7 @@
   <main>
 
     <!-- HOME HEADER -->
-    <header class="home-header">
+    <header class="home-header" id="home">
         <h1 class="party-time">Party Time</h1>
         <div class="box"><h3 class="by-2-burger">Buy any 2 burgers and get 1.5L Pepsi Free</h3></div>
         <a class="btn btn-sm rounded-pill btn-warning order-btn">Order Now</a>

@@ -1,43 +1,49 @@
 function sendForm(form){
-
   let requestToPost = new XMLHttpRequest();
   requestToPost.open("POST", "php/review.php", true);
   let data = new FormData(form);
 
   requestToPost.send(data);
   requestToPost.onreadystatechange = ()=>{
-
-      var response = JSON.parse(requestToPost.responseText);
-      if (requestToPost.readyState == 4 && requestToPost.status == "200") {
-          document.getElementById("taps-area").innerHTML =
-              '<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">'
-            +   '<li class="nav-item" role="presentation">'
-            +       '<button class="nav-link desciption-title" id="pills-discription-tab" data-bs-toggle="pill" data-bs-target="#pills-discription" type="button" role="tab" aria-controls="pills-discription" aria-selected="false">Discription</button>'
-            +   '</li>'
-            +   '<li class="nav-item" role="presentation">'
-            +       '<button class="nav-link desciption-title active" id="pills-reviews-tab" onclick="showReviews(<?= $_GET["id"] ?>)" data-bs-toggle="pill" data-bs-target="#pills-reviews" type="button" role="tab" aria-controls="pills-reviews" aria-selected="true">Reviews</button>'
-            +   '</li>'
-            + '</ul>'
+    alert(requestToPost.readyState);
+    alert(requestToPost.status);
+    if (requestToPost.readyState == 4 && requestToPost.status == "200") {
+      if(requestToPost.response){
+        alert("Your review has been added successfully");
       }
-      else {
-          console.error(response);
+      else{
+        alert("false");
       }
-      showReviews(form.firstElementChiled.value)
+      showReviews(form.firstElementChild.value);
+    }
   }
-  return false
+  return false;
 }
 
 
 function showReviews(id) {
-
+    // alert("hi0")
     let requestToGet = new XMLHttpRequest();
+    // alert("hi0.1")
     requestToGet.open("GET", "php/review.php?id="+id, true);
+    // alert("hi0.2")
     requestToGet.onload = function() {
+        // alert("hi1")
         var response = JSON.parse(requestToGet.responseText);
         if (requestToGet.readyState == 4 && requestToGet.status == "200") {
-
+              // alert("hi2")
             console.table(response);
             if (response.length > 0) {
+              // alert("hi3")
+              // document.getElementById("taps-area").innerHTML =
+              //   '<ul class="nav nav-pills nav-fill mt-5 mb-4" id="pills-tab" role="tablist">'
+              // +   '<li class="nav-item" role="presentation">'
+              // +       '<button class="nav-link desciption-title" id="pills-discription-tab" data-bs-toggle="pill" data-bs-target="#pills-discription" type="button" role="tab" aria-controls="pills-discription" aria-selected="false">Discription</button>'
+              // +   '</li>'
+              // +   '<li class="nav-item" role="presentation">'
+              // +       '<button class="nav-link desciption-title active" id="pills-reviews-tab" onclick="showReviews('+id+')" data-bs-toggle="pill" data-bs-target="#pills-reviews" type="button" role="tab" aria-controls="pills-reviews" aria-selected="true">Reviews</button>'
+              // +   '</li>'
+              // + '</ul>'
 
               document.getElementById("indicators-area").innerHTML = ""
               document.getElementById("inner-area").innerHTML = ""
@@ -96,6 +102,7 @@ function showReviews(id) {
                   +   '</div>';
                   + '</div>'
               }
+              // alert("hi4")
 
             }
             else {
@@ -107,6 +114,18 @@ function showReviews(id) {
         }
     }
     requestToGet.send();
+}
+
+function nav_to(area) {
+  document.getElementById(area+'-anchor').click();
+}
+
+function hide_nav_onscroll() {
+  let nav = document.getElementById('navbarTogglerDemo02');
+
+  if(nav.offsetParent != null) {
+    nav.classList.toggle('show');
+  }
 }
 
 
@@ -322,14 +341,14 @@ function SubmitButtonClicked() {
 
 function disappearReviewList() {
   document.getElementById('Reviewlist').style.display = "none";
-  console.log("dis")
 }
 
 function appear(){
   document.getElementById('Reviewlist').style.display = "block";
-  for (var i = 0; i < 10000000; i++) {
-    //
-  }
+  setTimeout(showAnimation, 0);
+}
+
+function showAnimation() {
   document.getElementById('Reviewlist').style.height = "100%";
   document.getElementById('Reviewlist').style.paddingLeft = "0px";
 }

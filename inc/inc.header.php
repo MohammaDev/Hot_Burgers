@@ -1,4 +1,4 @@
-<nav class="nav-container navbar fixed-top navbar-expand-xl  navbar-dark">
+<nav class="nav-container navbar fixed-top navbar-expand-xl navbar-dark">
   <a class="navbar-brand" href="../Hot_Burgers">
     <img src="Images/logo-White.svg" alt="logo-image">
   </a>
@@ -8,16 +8,22 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav ms-uto">
-      <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="index.php#menu">Menu</a></li>
-      <li class="nav-item"><a class="nav-link" href="index.php#gallery">Gallery</a></li>
-      <li class="nav-item"><a class="nav-link" href="index.php#testimonials">Testimonials</a></li>
-      <li class="nav-item"><a class="nav-link" href="#contact">Conatct</a></li>
+    <ul class="navbar-nav navbar-nav-scroll" style="--bs-scroll-height: 51vh;">
+      <li class="nav-item"><a class="nav-link" onclick="nav_to('home')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="nav_to('menu')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Menu</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="nav_to('gallery')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="nav_to('testimonials')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Testimonials</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="nav_to('contact')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Conatct</a></li>
       <li class="nav-item li-red"> <a class="nav-link" href="">Search</a></li>
       <li class="nav-item li-red"> <a class="nav-link" href="">Profile</a></li>
       <li class="nav-item li-red"> <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="CartButtonClicked()">Cart<span id="counter">0</span> </a></li>
     </ul>
+
+    <a id="home-anchor" onclick="hide_nav_onscroll()" href="index.php#home"></a>
+    <a id="menu-anchor" onclick="hide_nav_onscroll()" href="index.php#menu"></a>
+    <a id="gallery-anchor" onclick="hide_nav_onscroll()" href="index.php#gallery"></a>
+    <a id="testimonials-anchor" onclick="hide_nav_onscroll()" href="index.php#testimonials"></a>
+    <a id="contact-anchor" onclick="hide_nav_onscroll()" href="#contact"></a>
   </div>
 </nav>
 
